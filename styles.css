@@ -16,31 +16,47 @@ body {
 }
 
 /* --- Title ---*/
-body h1 {
+.title {
     position: absolute;
     top: 40%;
     left: 50%;
     z-index: 100;
-    transform: translate(-50%, -50%);
     font-family: "Boogaloo", sans-serif;
+    font-size: 3rem;
     font-weight: 400;
     font-style: normal;
-    font-size: 6rem;
     color: #EAD37A;
     text-align: center;
     text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    transform: translate(-50%, -50%);
     animation: showUp 1s ease-in-out;
 }
 
 @keyframes showUp {
     0% {
         opacity: 0;
-        font-size: 3rem;
+        font-size: 1rem;
     }
     100% {
         opacity: 1;
+        font-size: 3rem;
     }
 }
+
+.bouncing {
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
 
 /* --- Fireworks ---*/
 .pyro > .before,
@@ -96,9 +112,17 @@ body h1 {
       background-image: url('./img/hny_2026_mobile_bg.png');
     }
 
-    body h1 {
+    .title {
       top: 25%;
-      font-size: 3.5rem;
-      color: #EAD37A;
+      font-size: 1.5rem;
   }
+
+  @keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
 }
