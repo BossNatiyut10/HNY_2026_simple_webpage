@@ -117,6 +117,17 @@ body {
       font-size: 1.5rem;
   }
 
+  @keyframes showUp {
+    0% {
+        opacity: 0;
+        font-size: 0.5rem;
+    }
+    100% {
+        opacity: 1;
+        font-size: 1.5rem;
+    }
+}
+
   @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
