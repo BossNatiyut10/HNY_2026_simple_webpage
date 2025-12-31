@@ -113,8 +113,8 @@ body {
     }
 
     .title {
-      top: 25%;
-      font-size: 1.5rem;
+      top: 30%;
+      font-size: 1.8rem;
   }
 
   @keyframes showUp {
@@ -124,7 +124,7 @@ body {
     }
     100% {
         opacity: 1;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 }
 
