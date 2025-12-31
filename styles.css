@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("public/img/hny_2026_pc_bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* --- Title ---*/
+body h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    font-family: "Boogaloo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6rem;
+    color: #EAD37A;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    animation: showUp 1s ease-in-out;
+}
+
+@keyframes showUp {
+    0% {
+        opacity: 0;
+        font-size: 3rem;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* --- Fireworks ---*/
+.pyro > .before,
+.pyro > .after {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  box-shadow: 0 0 #fff; /* ค่าเริ่มต้น */
+  animation: bang 1s ease-out infinite backwards,
+            /* bang anination created by js */
+             gravity 1s ease-in infinite backwards,
+             position 5s linear infinite backwards;
+}
+
+.pyro > .after {
+  animation-delay: 1.25s, 1.25s, 1.25s;
+  animation-duration: 1.25s, 1.25s, 6.25s;
+}
+
+@keyframes gravity {
+  to {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+}
+
+@keyframes position {
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%, 59.9% {  
+    margin-top: 20%;
+    margin-left: 70%;
+  }
+  60%, 79.9% {  
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%, 99.9% {  
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-image: url('public/img/hny_2026_mobile_bg.png');
+    }
+
+    body h1 {
+      top: 25%;
+      font-size: 3.5rem;
+      color: #EAD37A;
+  }
+}
