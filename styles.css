@@ -9,7 +9,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-image: url("public/img/hny_2026_pc_bg.png");
+    background-image: url("./img/hny_2026_pc_bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -93,7 +93,7 @@ body h1 {
 
 @media only screen and (max-width: 600px) {
     body {
-      background-image: url('public/img/hny_2026_mobile_bg.png');
+      background-image: url('./img/hny_2026_mobile_bg.png');
     }
 
     body h1 {
